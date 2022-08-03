@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LukePBurnett</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Image --> 
+    <div class="hero-img"></div>
+    <div class="wrapper">
+
+        <header>
+            <!-- Clickable link use # on href for no link-->
+            <a href="#" class = "logo"> 
+                Luke <span class="panupon"></span> Burnett
+                <!-- Sun emoji that switch to moon emoji when switch to dark mode-->                         
+                <label class="switch">
+                    <input type="checkbox" onclick="myFunction()" id="swap">
+                    <label id ="sun" for="swap">&#127774;</label>
+                </label>
+            </a>
+            <!-- Unorder list-->
+            <nav>
+                <svg class="close" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.2em" height="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#4d4d4d" d="M13.34 8.17c-.93 0-1.69-.77-1.69-1.7a1.69 1.69 0 0 1 1.69-1.69c.94 0 1.7.76 1.7 1.69c0 .93-.76 1.7-1.7 1.7M10.3 19.93l-5.93-1.18l.34-1.7l4.15.85l1.35-6.86l-1.52.6v2.86H7v-3.96l4.4-1.87l.67-.08c.6 0 1.1.34 1.43.85l.86 1.35c.68 1.21 2.03 2.03 3.64 2.03v1.68c-1.86 0-3.56-.83-4.66-2.1l-.5 2.54l1.77 1.69V23h-1.69v-5.1l-1.78-1.69l-.84 3.72M21 23h-2V3H6v13.11l-2-.42V1h17v22M6 23H4v-3.22l2 .42V23Z"/></svg>
+                <ul>
+                    <!-- Shit+option+ arrow down to copy the line to the line below-->
+                    <li><a href="#">About me</a></li>
+                    <li><a href="https://github.com/TawanP">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/lukepburnett/">Linkedln</a></li>
+
+                </ul>
+
+                
+            </nav>
+
+            <svg class = "menu" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z" fill="#4d4d4d"/>
+            </svg>
+
+        </header>
+
+        <section class="hero">
+            <h1>
+                My name is Luke &#129312;
+            </h1>
+            <p class="subhead"> I am a <span class="driven">driven</span>, self-starter programmer who loves to <span class="code">code!</span></p>
+
+            <svg class="down-arrow" viewBox="0 0 16 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.29289 131.707C7.68341 132.098 8.31658 132.098 8.7071 131.707L15.0711 125.343C15.4616 124.953 15.4616 124.319 15.0711 123.929C14.6805 123.538 14.0474 123.538 13.6568 123.929L7.99999 129.586L2.34314 123.929C1.95262 123.538 1.31945 123.538 0.928927 123.929C0.538402 124.319 0.538402 124.953 0.928927 125.343L7.29289 131.707ZM7 -4.37114e-08L6.99999 131L8.99999 131L9 4.37114e-08L7 -4.37114e-08Z" fill="black"/>
+            </svg>
+                
+        </section>
+
+        <section class="more-info">
+            <!-- Feature-->
+            <!-- First column-->
+            <div class=" feature">
+                <div class=" content">
+                    <p class="title">Software developer <span id="demo"></span> </p>
+                    <p class="desc">Write well designed, testable, efficient code by using best software development practices. Create website layout/user interface by using standard HTML/CSS practices.</p>
+                </div>
+                <!-- <a href="https://www.incapsulate.com/"> -->
+                    <img src="images/Incapsulate.png" class="incapsulate" alt="Incapsulate logo">
+                <!-- </a> -->
+                
+            </div>
+            <!-- Second column with two class feature and left-->
+            <div class="feature left">
+                <div class=" content">
+                    <p class="title">Bachelor of Science in Computer Science</p>
+                    <p class="desc2">3.71 GPA</p>
+                </div>
+                <!-- <a href="https://www.gmu.edu/"> -->
+                    <img src="images/gmu.png" alt="George Mason Logo">
+                <!-- </a> -->
+                
+            </div>
+            <!-- Third column-->
+            <div class=" feature cert">
+                <div class=" content">
+                    <p class="title">Salesforce Certified Administrator (SCA)</p>
+                    <p class="desc">Importing sales department leads, contacts, and other data. Maintaining the sales cloud, as well as building custom reports and dashboards. Performing database maintenance tasks, including diagnostic tests and duplicate entry cleansing.</p>
+                </div>
+                <div class="card"></div>
+                <!-- <img src="images/salesforce.png"  alt="Salesforce Certified Admin logo"> -->
+            </div>
+
+        </section>
+
+    </div>
+
+    <script>
+        //Calculate the amount of months that been working.
+        var startDate = new Date("06/01/2022"); 
+        var currDate = new Date();
+        var difference= Math.abs(currDate-startDate);
+        days = difference/(1000 * 3600 * 24)
+        document.getElementById("demo").innerHTML = '('+parseInt(days/30.416666666666668) + ' months'+')';
+
+        //create variable associate with class on HTML
+        const menu = document.querySelector('.menu')
+        const close = document.querySelector('.close')
+        const nav = document.querySelector('nav')
+        //If nav button is click the open-nav fucntion will be execute
+        menu.addEventListener('click', () =>{nav.classList.add('open-nav')}) //open-nav is a class on css
+        //If close button is click the open-nav fucntion will be remove 
+        close.addEventListener('click', () =>{nav.classList.remove('open-nav')})
+
+        //Darkmode
+        function myFunction() 
+        {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+            
+
+         }
+         
+
+    </script>
+</body>
+</html>
