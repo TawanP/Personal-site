@@ -1,431 +1,597 @@
-@charset "UTF-8";
-body {
-  background-color: #f4f4f4;
-  margin: 1.5em;
-  font-family: "Merriweather", sans-serif;
-  /* Rounded sliders */
-}
-body a {
-  text-decoration: none;
-  font-size: 1.3rem;
-}
-body .hero-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("../images/Luke1.jpg");
-  background-size: cover;
-  background-position-x: 20%;
-  background-position-y: 20%;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  -webkit-animation: introLoad 2s forwards;
-          animation: introLoad 2s forwards;
-}
-body .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  transition: transform 0.2s;
-}
-body .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-body .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-}
-body .slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: 0.4s;
-}
-body input:checked + .slider {
-  background-color: #2196F3;
-}
-body input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-body input:checked + .slider:before {
-  transform: translateX(26px);
-}
-body .slider.round {
-  border-radius: 34px;
-}
-body .slider.round:before {
-  border-radius: 50%;
-}
-body .switch:hover {
-  background: none;
-  transform: scale(1.5);
-}
-body #sun {
-  position: relative;
-}
-body #swap {
-  display: none;
-}
-body #swap:checked + #sun:after {
-  content: "🌝";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: none;
-}
-body .logo {
-  color: rgb(77, 77, 77);
-  font-weight: bold;
-  font-size: 2.3rem;
-}
-body .logo span {
-  color: rgb(227, 86, 86);
-}
-body .logo:hover {
-  content: "ye";
-}
-body .panupon:after {
-  content: "P";
-}
-body nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: rgb(243, 218, 200);
-  height: 100vh;
-  width: 50%;
-  z-index: 999;
-  text-transform: uppercase;
-  transform: translateX(100%);
-  transition: transform 0.5s ease-in-out;
-}
-body nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 8em;
-}
-body nav ul a {
-  color: #4d4d4d;
-  padding: 0.75em 2em;
-  display: block;
-  width: 100%;
-}
-body nav ul a:hover {
-  background: rgb(235, 235, 235);
-}
-body .close {
-  float: right;
-  margin: 1em 0.5em;
-  width: 2.5em;
-}
-body header {
-  display: flex;
-  justify-content: space-between;
-}
-body header svg {
-  stroke: pink;
-  position: unset;
-  width: 2em;
-  margin-top: -0.6em;
-  cursor: pointer;
-}
-body header svg path {
-  fill: black;
-}
-body h1 {
-  font-size: 3rem;
-  margin-top: 2em;
-  line-height: 3.3rem;
-}
-body .subhead {
-  font-size: 1.4rem;
-}
-body section.hero {
-  height: auto;
-  width: 30%;
-  color: #4d4d4d;
-  height: 90vh;
-  -webkit-animation: moveDown 1.5s ease-in-out forwards;
-          animation: moveDown 1.5s ease-in-out forwards;
-}
-body section.hero h1 {
-  font-size: 30px;
-}
-body section.hero .driven {
-  color: rgb(227, 86, 86);
-  font-weight: 700;
-}
-body section.hero .code {
-  color: #20C20E;
-  font-weight: 700;
-  font-size: 2rem;
-  font-family: "Courier New", Courier, monospace;
-  text-transform: uppercase;
-}
-body section.hero svg {
-  stroke: pink;
-  position: absolute;
-  bottom: 2em;
-  width: 1em;
-  animation: moveArrow 1s alternate-reverse infinite;
-}
-body section.hero svg path {
-  fill: black;
-}
-body .more-info {
-  color: #4d4d4d;
-}
-body .more-info img {
-  width: 25em;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 11em;
-  transition: transform 0.2s;
-}
-body .more-info .incapsulate {
-  width: 25em;
-  -o-object-fit: contain;
-     object-fit: contain;
-  height: 11em;
-  transition: transform 0.2s;
-}
-body .more-info .title {
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-body .more-info .desc {
-  line-height: 1.5rem;
-}
-body .more-info .desc2 {
-  line-height: 1.5rem;
-  font-size: 3rem;
-  font-weight: li;
-}
-body .more-info .feature.cert .card {
-  width: 25em;
-  height: 11em;
-  background: url("../images/salesforce.png") no-repeat;
-  background-size: contain;
-  background-position: center;
-  transition: transform 0.3s;
-}
-body .more-info .feature.cert .card:hover {
-  background: url("../images/LukeCert.jpeg") no-repeat;
-  background-size: cover;
-  transform: scale(1.2);
+
+body
+{
+    background-color: #f4f4f4;
+    margin: 1.5em; //em is relative unit good for margin relative to font size
+    // width: 100%;
+    //If the First font the user doesnt have and we did not import for them the second font will take in place instead.
+    font-family: 'Merriweather', sans-serif;
+    a{
+        text-decoration: none;// Get rid of underline that show on the hyperlink
+        font-size: 1.3rem; //rem is the best for the font size
+    }
+
+    .hero-img
+    {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        //insert background
+        background: url('../images/Luke1.jpg');
+        background-size: cover;
+        background-position-x: 20%;
+        background-position-y: 20%;
+        width: 100%;
+        height: 100vh; //veiw port height 
+        z-index: -1; //work with postion absolute or fixed -1 to push it into the back
+        animation: introLoad 2s forwards;// Animation
+        //overflow: hidden;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        //margin-right: 20em;
+        transition: transform .2s;
+      }
+      
+      .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      input:checked + .slider {
+        background-color: #2196F3;
+      }
+      
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+      
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+      
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+      
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
+      .switch
+      {
+          &:hover //refer to a
+          {
+              background: none;
+              transform: scale(1.5);
+          }
+      }
+//Change emoji from sun to moon when switch to darkmode
+    #sun {
+        position: relative;
+      }
+      #swap {
+        display: none;
+      }
+      #swap:checked + #sun:after {
+        content: "🌝";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: none;
+      }
+
+
+
+    .logo
+    {
+        //margin-left: .3em;  
+        color: rgb(77, 77, 77);
+        span
+        {
+            color: rgb(227, 86, 86);
+        }
+        font-weight: bold;
+        font-size: 2.3rem;
+        
+    }
+
+    .logo:hover
+    {
+        content: "ye";
+    }
+
+    //From P to Panupon
+    .panupon:after{
+        content:'P';
+    }
+
+
+    nav
+    {
+        position:fixed;
+        top: 0;
+        right: 0;
+        background-color: rgb(243, 218, 200);
+        height: 100vh;
+        width: 50%;
+        z-index: 999 ;
+        text-transform: uppercase;
+        transform: translateX(100%); //Hide the nav
+        transition: transform .5s ease-in-out;
+
+        ul
+        {
+            list-style-type: none; // remove bullet point
+            padding: 0;
+            margin-top:  8em;
+
+            a{
+                color: #4d4d4d;
+                padding: .75em 2em;
+                display: block;
+                width: 100%;
+
+                &:hover{
+                    background: rgb(235, 235, 235);
+                }
+            }
+        }
+
+    }
+
+    .close
+    {
+        float: right;
+        margin: 1em .5em;
+        width: 2.5em;
+
+    }
+
+    header
+    {
+        display: flex; //change from row to column
+        justify-content: space-between;
+
+        //any svg element inside the header will affect by this (The three stripe)
+        svg
+        {
+            stroke: pink;
+            position: unset;
+            path
+            {
+                fill: black;
+            }
+            width: 2em;
+            margin-top: -.6em;
+            cursor: pointer;
+            
+        }
+    }  
+
+    h1
+    {
+        font-size: 3rem;
+        margin-top: 2em;
+        line-height: 3.3rem;
+        
+    }
+    .subhead
+    {
+        font-size: 1.4rem;
+    }
+
+    section.hero
+    {
+        height: auto;
+        width: 30%;
+        h1
+        {
+            font-size: 30px;
+        }
+        color: #4d4d4d;
+        height: 90vh;
+        animation: moveDown 1.5s ease-in-out forwards; //forward mean only work once
+        //The down arrow
+        //.down-arrow
+        .driven
+        {
+            color: rgb(227, 86, 86);
+            font-weight: 700;
+        }
+        .code
+        {
+            color: #20C20E;
+            font-weight: 700;
+            font-size: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+        }
+        svg
+        {
+            stroke: pink;
+            position: absolute;
+            bottom: 2em;
+            width: 1em;
+            animation: moveArrow 1s alternate-reverse infinite; //infinite mean it will  loop on forever
+            path{fill: black;}
+        }
+
+        
+    }
+
+    .more-info
+    {
+        color: #4d4d4d;
+        img{
+            width: 25em;
+            object-fit: cover;
+            height: 11em;
+            transition: transform .2s;
+
+        }
+        .incapsulate{
+            width: 25em;
+            object-fit: contain;
+            height: 11em;
+            transition: transform .2s;
+
+        }
+        .title{
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        .desc
+        {
+            line-height: 1.5rem;
+        }
+
+        .desc2
+        {
+            line-height: 1.5rem;
+            font-size: 3rem;
+            font-weight: li;
+        }
+
+        .feature.cert
+        {
+            .card {
+                width: 25em;
+                height: 11em;
+                background: url("../images/salesforce.png") no-repeat;
+                background-size: contain;
+                background-position: center;
+                transition: transform .3s; // transit to card.hover
+            }
+            .card:hover {
+                background: url("../images/LukeCert.jpeg") no-repeat;
+                background-size: cover;
+                transform: scale(1.2);
+            }
+            
+        }
+
+        // img:hover
+        // {
+        //     //transform: scale(1.5);
+        // }
+    }
+
+
 }
 
-@media only screen and (min-width: 680px) {
-  body {
-    margin: 1.5em 5em;
-    font-family: "Merriweather", sans-serif;
-  }
-  body .more-info img:hover {
-    transform: scale(1.5);
-  }
-  body .more-info .feature.cert .card:hover {
-    transform: scale(1.5);
-  }
-  body .panupon:hover:after {
-    content: "Panupon";
-  }
+
+    //When to readjust the webpage (This for desktop) When the width px is exceed 680px [Called breakpoint]
+    @media only screen and (min-width: 680px)
+    {
+        body
+        {   
+            
+            margin: 1.5em 5em; //1.5em is for top & bottom, and 5em is for left and right margin
+            font-family: 'Merriweather', sans-serif;
+            .more-info
+            {
+                img:hover
+                {
+                    transform: scale(1.5);
+                }
+
+                .feature.cert
+                {
+                    .card:hover 
+                    {
+    
+                        transform: scale(1.5);
+                    }
+                }
+            }
+        //Only allow to convert P to Panupon when the window exceed 680px width
+            .panupon:hover:after{
+                content:'Panupon';
+            }
+        }
+    }
+    //When the webpage is exceed 920px
+    @media only screen and (min-width: 970px)
+    {
+        body
+        {
+            .hero-img
+            {
+                display: block;
+            }
+            //Hide the menu
+            .menu
+            {
+                display: none;
+            }
+            nav
+            {
+                transform: translateX(0);
+                position: unset;
+                display: block;
+                width: auto;
+                height: auto;
+                background: none;
+
+                svg.close
+                {
+                    display: none;
+                }
+                ul{
+                    display: flex;
+                    margin: 0;
+                    a{
+                        color: #4d4d4d;
+                        padding:  .5em 1.5em;
+                        font-size: .9rem;
+                        font-weight: 600;
+        
+                        &:hover //refer to a
+                        {
+                            background: none;
+                            transform: scale(1.2);
+                            color: rgb(227, 86, 86);
+                            font-weight: bolder;
+                        }
+                    }
+                }
+    
+            }
+
+            .hero-img
+            {
+                left: unset;
+                right: 0;
+                width: 50%;
+                height: 42em;
+            }
+
+            section.hero
+            {
+                //color: black;
+                height: auto;
+                width: 40%;
+                margin-bottom: 8em;
+                h1 
+                {
+                    font-size: 48px;
+                }
+                svg
+                {
+                    stroke: pink;
+                    position: unset;
+                    path
+                    {
+                        fill: black;
+                    }
+                }
+            }
+            .feature
+            {
+                display: grid;
+                grid-template-columns: repeat(2, auto); //the first argument determine column count
+                gap: 3em;
+                margin-bottom:4em;
+
+                img
+                {
+                 width: 25em;
+                }
+
+                .content
+                {
+                    text-align: right;
+                    width: 25em;
+                }
+            }
+
+            .feature.left
+            {
+                grid-template-areas: "left right";
+
+                img
+                {
+                    grid-area: left;
+                    width: 25em;
+                }
+
+                .content
+                {
+                    text-align: left;
+                    width: 25em;
+                    justify-self: left;
+
+                }
+            }
+    
+        }
+    }
+
+    @media only screen and (min-width: 1200px)
+    {
+        //max size of the screen
+        .wrapper
+        {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .feature // not sure what is doing
+        {
+            gap: 0;
+        }
+        body
+        {
+            .more-info
+            {
+                img:hover
+                {
+                    transform: scale(1.5);
+                }
+            }
+
+        }
+    }
+
+
+//Define animation
+@keyframes introLoad
+{
+    from
+    {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to
+    {
+        clip-path: polygon(0 0, 100% 0, 100% 46%, 100% 100%);
+    }
 }
-@media only screen and (min-width: 970px) {
-  body .hero-img {
-    display: block;
-  }
-  body .menu {
-    display: none;
-  }
-  body nav {
-    transform: translateX(0);
-    position: unset;
-    display: block;
-    width: auto;
-    height: auto;
-    background: none;
-  }
-  body nav svg.close {
-    display: none;
-  }
-  body nav ul {
-    display: flex;
-    margin: 0;
-  }
-  body nav ul a {
-    color: #4d4d4d;
-    padding: 0.5em 1.5em;
-    font-size: 0.9rem;
-    font-weight: 600;
-  }
-  body nav ul a:hover {
-    background: none;
-    transform: scale(1.2);
-    color: rgb(227, 86, 86);
-    font-weight: bolder;
-  }
-  body .hero-img {
-    left: unset;
-    right: 0;
-    width: 50%;
-    height: 42em;
-  }
-  body section.hero {
-    height: auto;
-    width: 40%;
-    margin-bottom: 8em;
-  }
-  body section.hero h1 {
-    font-size: 48px;
-  }
-  body section.hero svg {
-    stroke: pink;
-    position: unset;
-  }
-  body section.hero svg path {
-    fill: black;
-  }
-  body .feature {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 3em;
-    margin-bottom: 4em;
-  }
-  body .feature img {
-    width: 25em;
-  }
-  body .feature .content {
-    text-align: right;
-    width: 25em;
-  }
-  body .feature.left {
-    grid-template-areas: "left right";
-  }
-  body .feature.left img {
-    grid-area: left;
-    width: 25em;
-  }
-  body .feature.left .content {
-    text-align: left;
-    width: 25em;
-    justify-self: left;
-  }
+@keyframes moveArrow
+{
+    from
+    {
+        transform: translateY(-20px);
+    }
+    to
+    {
+        transform: translateY(0px);
+    }
 }
-@media only screen and (min-width: 1200px) {
-  .wrapper {
-    width: 1200px;
-    margin: 0 auto;
-  }
-  .feature {
-    gap: 0;
-  }
-  body .more-info img:hover {
-    transform: scale(1.5);
-  }
+@keyframes moveDown
+{
+    from
+    {
+        transform: translateY(-100px);
+    }
+    to
+    {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
-@-webkit-keyframes introLoad {
-  from {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-  to {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 46%, 100% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 46%, 100% 100%);
-  }
-}
-@keyframes introLoad {
-  from {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
-  to {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 46%, 100% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 46%, 100% 100%);
-  }
-}
-@-webkit-keyframes moveArrow {
-  from {
-    transform: translateY(-20px);
-  }
-  to {
-    transform: translateY(0px);
-  }
-}
-@keyframes moveArrow {
-  from {
-    transform: translateY(-20px);
-  }
-  to {
-    transform: translateY(0px);
-  }
-}
-@-webkit-keyframes moveDown {
-  from {
-    transform: translateY(-100px);
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-@keyframes moveDown {
-  from {
-    transform: translateY(-100px);
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-.open-nav {
+
+//js class
+.open-nav
+{
   transform: translateX(0%);
 }
 
-.dark-mode {
-  background-color: rgb(62, 62, 62);
+//Dark mode
+
+.dark-mode
+{
+    background-color: rgb(62, 62, 62);
+
+    .logo
+    {
+        //margin-left: .3em;  
+        color: white;
+        span
+        {
+            color: rgb(227, 86, 86);
+        }
+        font-weight: bold;
+        font-size: 2.3rem;
+    }
+
+    
+
+    section.hero
+    {
+        color: #f4f4f4;
+    }
+    .more-info
+    {
+        color: #f4f4f4;
+    }
+
+    section.hero
+    {
+        svg
+        {
+            stroke: pink;
+            position: unset;
+            path
+            {
+                fill: black;
+            }
+        }
+    }
+
+    .skill
+    {
+        .myskill
+        {
+            color: white;
+        }
+        .arrow
+        {
+            background-color: #f4f4f4;
+            border-top-left-radius: 10%;
+            // border-top-right-radius: 8%;
+            // border-bottom-left-radius: 8%;
+            border-bottom-right-radius: 10%;
+            
+            
+        }
+        
+    }
+
+    
+
 }
-.dark-mode .logo {
-  color: white;
-  font-weight: bold;
-  font-size: 2.3rem;
-}
-.dark-mode .logo span {
-  color: rgb(227, 86, 86);
-}
-.dark-mode section.hero {
-  color: #f4f4f4;
-}
-.dark-mode .more-info {
-  color: #f4f4f4;
-}
-.dark-mode section.hero svg {
-  stroke: pink;
-  position: unset;
-}
-.dark-mode section.hero svg path {
-  fill: black;
-}
-.dark-mode .skill .myskill {
-  color: white;
-}
-.dark-mode .skill .arrow {
-  background-color: #f4f4f4;
-  border-top-left-radius: 10%;
-  border-bottom-right-radius: 10%;
-}/*# sourceMappingURL=main.css.map */
