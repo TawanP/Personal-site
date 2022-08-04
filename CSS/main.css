@@ -5,10 +5,12 @@ body {
   font-family: "Merriweather", sans-serif;
   /* Rounded sliders */
 }
+
 body a {
   text-decoration: none;
   font-size: 1.3rem;
 }
+
 body .hero-img {
   position: absolute;
   top: 0;
@@ -21,8 +23,9 @@ body .hero-img {
   height: 100vh;
   z-index: -1;
   -webkit-animation: introLoad 2s forwards;
-          animation: introLoad 2s forwards;
+  animation: introLoad 2s forwards;
 }
+
 body .switch {
   position: relative;
   display: inline-block;
@@ -30,11 +33,13 @@ body .switch {
   height: 34px;
   transition: transform 0.2s;
 }
+
 body .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
+
 body .slider {
   position: absolute;
   cursor: pointer;
@@ -45,6 +50,7 @@ body .slider {
   background-color: #ccc;
   transition: 0.4s;
 }
+
 body .slider:before {
   position: absolute;
   content: "";
@@ -55,31 +61,40 @@ body .slider:before {
   background-color: white;
   transition: 0.4s;
 }
+
 body input:checked + .slider {
   background-color: #2196F3;
 }
+
 body input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
+
 body input:checked + .slider:before {
   transform: translateX(26px);
 }
+
 body .slider.round {
   border-radius: 34px;
 }
+
 body .slider.round:before {
   border-radius: 50%;
 }
+
 body .switch:hover {
   background: none;
   transform: scale(1.5);
 }
+
 body #sun {
   position: relative;
 }
+
 body #swap {
   display: none;
 }
+
 body #swap:checked + #sun:after {
   content: "🌝";
   position: absolute;
@@ -89,20 +104,25 @@ body #swap:checked + #sun:after {
   bottom: 0;
   background: none;
 }
+
 body .logo {
   color: rgb(77, 77, 77);
   font-weight: bold;
   font-size: 2.3rem;
 }
+
 body .logo span {
   color: rgb(227, 86, 86);
 }
+
 body .logo:hover {
   content: "ye";
 }
+
 body .panupon:after {
   content: "P";
 }
+
 body nav {
   position: fixed;
   top: 0;
@@ -115,52 +135,75 @@ body nav {
   transform: translateX(100%);
   transition: transform 0.5s ease-in-out;
 }
+
 body nav ul {
   list-style-type: none;
   padding: 0;
   margin-top: 8em;
 }
+
 body nav ul a {
   color: #4d4d4d;
   padding: 0.75em 2em;
   display: block;
   width: 100%;
 }
+
 body nav ul a:hover {
   background: rgb(235, 235, 235);
 }
+
 body .close {
   float: right;
   margin: 1em 0.5em;
   width: 2.5em;
 }
+
 body header {
   display: flex;
   justify-content: space-between;
 }
+
 body header svg {
+  stroke: pink;
+  position: unset;
   width: 2em;
   margin-top: -0.6em;
   cursor: pointer;
 }
+
+body header svg path {
+  fill: black;
+}
+
 body h1 {
   font-size: 3rem;
   margin-top: 2em;
   line-height: 3.3rem;
 }
+
 body .subhead {
   font-size: 1.4rem;
 }
+
 body section.hero {
+  height: auto;
+  width: 30%;
   color: #4d4d4d;
   height: 90vh;
   -webkit-animation: moveDown 1.5s ease-in-out forwards;
-          animation: moveDown 1.5s ease-in-out forwards;
+  animation: moveDown 1.5s ease-in-out forwards;
 }
+
+body section.hero h1 {
+  font-size: 30px;
+}
+
 body section.hero .driven {
   color: rgb(227, 86, 86);
   font-weight: 700;
 }
+
 body section.hero .code {
   color: #20C20E;
   font-weight: 700;
@@ -168,45 +211,54 @@ body section.hero .code {
   font-family: "Courier New", Courier, monospace;
   text-transform: uppercase;
 }
+
 body section.hero svg {
-  stroke: #4d4d4d;
+  stroke: pink;
   position: absolute;
   bottom: 2em;
   width: 1em;
   animation: moveArrow 1s alternate-reverse infinite;
 }
+
 body section.hero svg path {
   fill: black;
 }
+
 body .more-info {
   color: #4d4d4d;
 }
+
 body .more-info img {
   width: 25em;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 11em;
   transition: transform 0.2s;
 }
+
 body .more-info .incapsulate {
   width: 25em;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   height: 11em;
   transition: transform 0.2s;
 }
+
 body .more-info .title {
   font-weight: bold;
   font-size: 1.25rem;
 }
+
 body .more-info .desc {
   line-height: 1.5rem;
 }
+
 body .more-info .desc2 {
   line-height: 1.5rem;
   font-size: 3rem;
   font-weight: li;
 }
+
 body .more-info .feature.cert .card {
   width: 25em;
   height: 11em;
@@ -215,9 +267,11 @@ body .more-info .feature.cert .card {
   background-position: center;
   transition: transform 0.3s;
 }
+
 body .more-info .feature.cert .card:hover {
   background: url("../images/LukeCert.jpeg") no-repeat;
   background-size: cover;
+  transform: scale(1.2);
 }
 
 @media only screen and (min-width: 680px) {
@@ -226,16 +280,19 @@ body .more-info .feature.cert .card:hover {
     font-family: "Merriweather", sans-serif;
   }
   body .more-info img:hover {
-    transform: scale(1.2);
+    transform: scale(1.5);
   }
-  body .more-info .card:hover {
-    transform: scale(1.2);
+  body .more-info .feature.cert .card:hover {
+    transform: scale(1.5);
   }
   body .panupon:hover:after {
     content: "Panupon";
   }
 }
 @media only screen and (min-width: 970px) {
+  body .hero-img {
+    display: block;
+  }
   body .menu {
     display: none;
   }
@@ -276,6 +333,9 @@ body .more-info .feature.cert .card:hover {
     height: auto;
     width: 40%;
     margin-bottom: 8em;
+  }
+  body section.hero h1 {
+    font-size: 48px;
   }
   body section.hero svg {
     stroke: pink;
@@ -321,28 +381,25 @@ body .more-info .feature.cert .card:hover {
   body .more-info img:hover {
     transform: scale(1.5);
   }
-  body .more-info .card:hover {
-    transform: scale(1.5);
-  }
 }
 @-webkit-keyframes introLoad {
   from {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 46%, 100% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 46%, 100% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 46%, 100% 100%);
   }
 }
 @keyframes introLoad {
   from {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 46%, 100% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 46%, 100% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 46%, 100% 100%);
   }
 }
 @-webkit-keyframes moveArrow {
@@ -386,17 +443,40 @@ body .more-info .feature.cert .card:hover {
 .dark-mode {
   background-color: rgb(62, 62, 62);
 }
+
 .dark-mode .logo {
   color: white;
   font-weight: bold;
   font-size: 2.3rem;
 }
+
 .dark-mode .logo span {
   color: rgb(227, 86, 86);
 }
+
 .dark-mode section.hero {
   color: #f4f4f4;
 }
+
 .dark-mode .more-info {
   color: #f4f4f4;
-}/*# sourceMappingURL=main.css.map */
+}
+
+.dark-mode section.hero svg {
+  stroke: pink;
+  position: unset;
+}
+
+.dark-mode section.hero svg path {
+  fill: black;
+}
+
+.dark-mode .skill .myskill {
+  color: white;
+}
+
+.dark-mode .skill .arrow {
+  background-color: #f4f4f4;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+} /*# sourceMappingURL=main.css.map *//*# sourceMappingURL=main.css.map */
