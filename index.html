@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/horizontalscrollsnap.css">
+
+    <link rel="icon" href="/My projects/Mysite/MyWebpage/images/icon.png">
 </head>
 
 <body>
@@ -48,7 +51,7 @@
 
         <section class="hero">
             <h1>
-                My name is Luke &#129312;
+                My name is <span class="text_shadows">Luke</span> &#129312;
             </h1>
             <p class="subhead"> I am a <span class="driven">driven</span>, self-starter programmer who loves to <span class="code">code!</span></p>
 
@@ -56,6 +59,22 @@
                 <path d="M7.29289 131.707C7.68341 132.098 8.31658 132.098 8.7071 131.707L15.0711 125.343C15.4616 124.953 15.4616 124.319 15.0711 123.929C14.6805 123.538 14.0474 123.538 13.6568 123.929L7.99999 129.586L2.34314 123.929C1.95262 123.538 1.31945 123.538 0.928927 123.929C0.538402 124.319 0.538402 124.953 0.928927 125.343L7.29289 131.707ZM7 -4.37114e-08L6.99999 131L8.99999 131L9 4.37114e-08L7 -4.37114e-08Z" fill="black"/>
             </svg>
                 
+        </section>
+
+        <section class="skill">
+            <H2 class="myskill">My skill</H2>
+            <div class="arrow">
+                <H2 class="pointer">&#x2B05;</H2>
+                <div class="horizontal-snap">
+                    <a href="#"><img src="/My projects/Mysite/MyWebpage/images/html5.png" style="width: 170px; height: 170px;"></a>
+                    <a href="#"><img src="/My projects/Mysite/MyWebpage/images/css3.png" style="width: 170px; height: 170px;"></a>
+                    <a href="#"><img src="/My projects/Mysite/MyWebpage/images/js.png" class="jslogo" style="width: 170px; height: 170px;" ></a>
+                    <a href="#"><img src="/My projects/Mysite/MyWebpage/images/java.png " style="width: 170px; height: 170px;"></a>
+                    <a href="#"><img src="/My projects/Mysite/MyWebpage/images/python.png" style="width: 170px; height: 170px;"></a>
+                    <a href="#"><img src="/My projects/Mysite/MyWebpage/images/c.png" style="width: 170px; height: 170px;"></a>
+                </div>
+                <H2 class="pointer">&#x27A1;</H2>
+            </div>
         </section>
 
         <section class="more-info">
@@ -108,6 +127,7 @@
         const menu = document.querySelector('.menu')
         const close = document.querySelector('.close')
         const nav = document.querySelector('nav')
+
         //If nav button is click the open-nav fucntion will be execute
         menu.addEventListener('click', () =>{nav.classList.add('open-nav')}) //open-nav is a class on css
         //If close button is click the open-nav fucntion will be remove 

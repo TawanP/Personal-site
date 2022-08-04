@@ -1,0 +1,78 @@
+body
+{
+    .skill
+    {
+        color: rgb(77, 77, 77);
+        margin-bottom: 2.5em;
+        text-align: center;
+        font-weight: bold;
+        .horizontal-snap {
+            background-color: none;
+            margin: 0 auto;
+            display: grid;
+            grid-auto-flow: column;
+            gap: 1rem;
+            height: calc(180px + 1rem);
+            padding: 1rem;
+            //Display 2 skill at a time 170px *2
+            max-width: 340px;
+            overflow-y: auto;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x mandatory;
+          }
+          
+          .horizontal-snap > a {
+            scroll-snap-align: center;
+          }
+          
+          .horizontal-snap img {
+            width: 180px;
+            max-width: none;
+            object-fit: contain;
+            border-radius: 1rem;
+          }
+          .arrow
+          {
+            display: grid;
+            grid-template-columns: repeat(3, auto); //the first argument determine column count
+          }
+          .pointer
+          {
+            margin-top: 4em;
+          }
+    }
+}
+//Display 3 skill at a time
+@media only screen and (min-width: 510px)
+{
+  body
+  {
+    .skill
+    {
+      .horizontal-snap 
+      {
+        
+        max-width: 510px;
+      }
+    }
+  }
+}
+//Display all skill without scroll
+@media only screen and (min-width: 1325px)
+{
+  body
+  {
+    .pointer
+    {
+      display: none;
+    }
+    .skill
+    {
+      .horizontal-snap 
+      {
+        
+        max-width: 1200px;
+      }
+    }
+  }
+}
