@@ -21,7 +21,7 @@ body
         background: url('../images/Luke1.jpg');
         background-size: cover;
         background-position-x: 20%;
-        background-position-y: 20%;
+        background-position-y: 22%;
         width: 100%;
         height: 100vh; //veiw port height 
         z-index: -1; //work with postion absolute or fixed -1 to push it into the back
@@ -42,8 +42,8 @@ body
         // background-position-x: 20%;
         // background-position-y: 10%;
         
-        width: 25vh;
-        height: 25vh; //veiw port height 
+        width: 40vw;
+        height: 30vh; //veiw port height 
         z-index: -1; //work with postion absolute or fixed -1 to push it into the back
         animation: introLoad2 2s forwards;// Animation
         //overflow: hidden;
