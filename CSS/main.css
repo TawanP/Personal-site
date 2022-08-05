@@ -112,9 +112,6 @@ body .logo {
 body .logo span {
   color: rgb(227, 86, 86);
 }
-body .logo:hover {
-  content: "ye";
-}
 body .panupon:after {
   content: "P";
 }
@@ -195,7 +192,7 @@ body section.hero .code {
 }
 body section.hero svg {
   stroke: pink;
-  position: absolute;
+  position: unset;
   bottom: 2em;
   width: 1em;
   animation: moveArrow 1s alternate-reverse infinite;
@@ -464,6 +461,7 @@ body .more-info .feature.cert .card:hover {
 }
 .dark-mode section.hero svg {
   stroke: rgb(227, 86, 86);
+  position: unset;
 }
 .dark-mode section.hero svg path {
   fill: rgb(227, 86, 86);
