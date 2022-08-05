@@ -378,22 +378,22 @@ body .more-info .feature.cert .card:hover {
 }
 @-webkit-keyframes introLoad2 {
   from {
-    -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 48% 50%, 48% 50%);
-            clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 48% 50%, 48% 50%);
+    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+            clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
   }
   to {
-    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 }
 @keyframes introLoad2 {
   from {
-    -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 48% 50%, 48% 50%);
-            clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 48% 50%, 48% 50%);
+    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+            clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
   }
   to {
-    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 }
 @-webkit-keyframes moveArrow {
