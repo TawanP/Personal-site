@@ -463,11 +463,10 @@ body .more-info .feature.cert .card:hover {
   color: #f4f4f4;
 }
 .dark-mode section.hero svg {
-  stroke: pink;
-  position: unset;
+  stroke: rgb(227, 86, 86);
 }
 .dark-mode section.hero svg path {
-  fill: black;
+  fill: rgb(227, 86, 86);
 }
 .dark-mode .skill .myskill {
   color: white;

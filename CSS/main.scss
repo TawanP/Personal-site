@@ -622,11 +622,11 @@ body
     {
         svg
         {
-            stroke: pink;
-            position: unset;
+            stroke: rgb(227, 86, 86);
+            //position: unset;
             path
             {
-                fill: black;
+                fill: rgb(227, 86, 86);
             }
         }
     }
