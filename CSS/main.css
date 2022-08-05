@@ -25,13 +25,13 @@ body .hero-img {
           animation: introLoad 2s forwards;
 }
 body .hero-img2 {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: url("../images/headshot2.jpg");
   background-size: cover;
   width: 40vw;
-  height: 30vh;
+  height: 250px;
   z-index: -1;
   -webkit-animation: introLoad2 2s forwards;
           animation: introLoad2 2s forwards;

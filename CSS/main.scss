@@ -32,7 +32,7 @@ body
     .hero-img2
     {
         //display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         //insert background
@@ -43,7 +43,7 @@ body
         // background-position-y: 10%;
         
         width: 40vw;
-        height: 30vh; //veiw port height 
+        height: 250px; //veiw port height 
         z-index: -1; //work with postion absolute or fixed -1 to push it into the back
         animation: introLoad2 2s forwards;// Animation
         //overflow: hidden;
@@ -531,7 +531,7 @@ body
         clip-path: polygon(0 0, 100% 0, 100% 46%, 100% 100%);
     }
 }
-//octagon
+//Square
 @keyframes introLoad2
 {
     from
