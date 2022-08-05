@@ -24,6 +24,19 @@ body .hero-img {
   -webkit-animation: introLoad 2s forwards;
           animation: introLoad 2s forwards;
 }
+body .hero-img2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../images/headshot2.jpg");
+  background-size: cover;
+  width: 25vh;
+  height: 25vh;
+  z-index: -1;
+  -webkit-animation: introLoad2 2s forwards;
+          animation: introLoad2 2s forwards;
+  margin-left: 110%;
+}
 body .switch {
   position: relative;
   display: inline-block;
@@ -251,6 +264,9 @@ body .more-info .feature.cert .card:hover {
   body .hero-img {
     display: block;
   }
+  body .hero-img2 {
+    display: none;
+  }
   body .menu {
     display: none;
   }
@@ -358,6 +374,26 @@ body .more-info .feature.cert .card:hover {
   to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 46%, 100% 100%);
             clip-path: polygon(0 0, 100% 0, 100% 46%, 100% 100%);
+  }
+}
+@-webkit-keyframes introLoad2 {
+  from {
+    -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 48% 50%, 48% 50%);
+            clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 48% 50%, 48% 50%);
+  }
+  to {
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  }
+}
+@keyframes introLoad2 {
+  from {
+    -webkit-clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 48% 50%, 48% 50%);
+            clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 48% 50%, 48% 50%);
+  }
+  to {
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
   }
 }
 @-webkit-keyframes moveArrow {
