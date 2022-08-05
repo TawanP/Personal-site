@@ -217,11 +217,11 @@ body
         //any svg element inside the header will affect by this (The three stripe)
         svg
         {
-            stroke: pink;
+            stroke: #4d4d4d;
             position: unset;
             path
             {
-                fill: black;
+                fill: #4d4d4d;
             }
             width: 2em;
             margin-top: -.6em;
@@ -592,6 +592,19 @@ body
         }
         font-weight: bold;
         font-size: 2.3rem;
+    }
+    svg
+    {
+        stroke: #f4f4f4;
+        position: unset;
+        path
+        {
+            fill: #f4f4f4;
+        }
+        width: 2em;
+        margin-top: -.6em;
+        cursor: pointer;
+        
     }
 
     

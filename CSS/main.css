@@ -154,14 +154,14 @@ body header {
   justify-content: space-between;
 }
 body header svg {
-  stroke: pink;
+  stroke: #4d4d4d;
   position: unset;
   width: 2em;
   margin-top: -0.6em;
   cursor: pointer;
 }
 body header svg path {
-  fill: black;
+  fill: #4d4d4d;
 }
 body h1 {
   font-size: 3rem;
@@ -445,6 +445,16 @@ body .more-info .feature.cert .card:hover {
 }
 .dark-mode .logo span {
   color: rgb(227, 86, 86);
+}
+.dark-mode svg {
+  stroke: #f4f4f4;
+  position: unset;
+  width: 2em;
+  margin-top: -0.6em;
+  cursor: pointer;
+}
+.dark-mode svg path {
+  fill: #f4f4f4;
 }
 .dark-mode section.hero {
   color: #f4f4f4;
