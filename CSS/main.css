@@ -446,14 +446,14 @@ body .more-info .feature.cert .card:hover {
 .dark-mode .logo span {
   color: rgb(227, 86, 86);
 }
-.dark-mode svg {
+.dark-mode .menu {
   stroke: #f4f4f4;
   position: unset;
   width: 2em;
   margin-top: -0.6em;
   cursor: pointer;
 }
-.dark-mode svg path {
+.dark-mode .menu path {
   fill: #f4f4f4;
 }
 .dark-mode section.hero {
@@ -469,10 +469,13 @@ body .more-info .feature.cert .card:hover {
   fill: rgb(227, 86, 86);
 }
 .dark-mode .skill .myskill {
-  color: white;
+  color: #f4f4f4;
 }
 .dark-mode .skill .arrow {
   background-color: #f4f4f4;
   border-top-left-radius: 10%;
   border-bottom-right-radius: 10%;
+}
+.dark-mode .skill .arrow .pointer {
+  color: #4d4d4d;
 }/*# sourceMappingURL=main.css.map */

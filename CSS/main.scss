@@ -593,7 +593,7 @@ body
         font-weight: bold;
         font-size: 2.3rem;
     }
-    svg
+    .menu
     {
         stroke: #f4f4f4;
         position: unset;
@@ -635,7 +635,7 @@ body
     {
         .myskill
         {
-            color: white;
+            color: #f4f4f4;
         }
         .arrow
         {
@@ -644,7 +644,10 @@ body
             // border-top-right-radius: 8%;
             // border-bottom-left-radius: 8%;
             border-bottom-right-radius: 10%;
-            
+            .pointer
+            {
+                color: #4d4d4d;
+            }
             
         }
         
