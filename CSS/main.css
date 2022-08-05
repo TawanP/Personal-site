@@ -30,6 +30,7 @@ body .hero-img2 {
   left: 0;
   background: url("../images/headshot2.jpg");
   background-size: cover;
+  background-position-x: center;
   width: 40vw;
   height: 250px;
   z-index: -1;
