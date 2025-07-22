@@ -279,6 +279,7 @@ body
     .more-info
     {
         color: #4d4d4d;
+        display: none; //!!
         img{
             width: 25em;
             object-fit: cover;
@@ -326,11 +327,6 @@ body
             }
             
         }
-
-        // img:hover
-        // {
-        //     //transform: scale(1.5);
-        // }
     }
 
 
